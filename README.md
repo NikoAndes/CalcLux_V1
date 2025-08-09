@@ -36,5 +36,6 @@ CalcLux permite realizar operaciones matemáticas básicas y avanzadas, con vali
 
 ---
 
-## 📦 Estructura del Proyecto
+## 📦 Empaquetado y GUI
+<img width="583" height="416" alt="image" src="https://github.com/user-attachments/assets/0c7d1ae9-2875-40c4-a774-6251a08ced13" />
 
