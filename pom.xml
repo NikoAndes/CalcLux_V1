@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Archivo de configuración Maven para el proyecto CalcLux -->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- Identificación básica del proyecto -->
+    <groupId>org.example</groupId>         <!-- Grupo organizacional del proyecto -->
+    <artifactId>CalcLux</artifactId>       <!-- Nombre del artefacto (proyecto) -->
+    <version>1.0-SNAPSHOT</version>        <!-- Versión del proyecto -->
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding> <!-- Codificación de archivos fuente -->
+        <maven.compiler.source>17</maven.compiler.source>                 <!-- Versión mínima de Java requerida -->
+        <maven.compiler.target>17</maven.compiler.target>                 <!-- Versión objetivo de compilación -->
+        <javafx.version>21</javafx.version>                               <!-- Versión de JavaFX utilizada -->
+        <junit.jupiter.version>5.10.2</junit.jupiter.version>             <!-- Versión de JUnit Jupiter (JUnit 5) -->
+    </properties>
+
+    <dependencies>
+        <!-- Dependencia principal de JavaFX para controles gráficos -->
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-controls</artifactId>
+            <version>${javafx.version}</version>
+        </dependency>
+        <!-- Dependencia para soporte de archivos FXML en JavaFX -->
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-fxml</artifactId>
+            <version>${javafx.version}</version>
+        </dependency>
+        <!--
+            NOTA DE SEGURIDAD:
+            La versión 21 de JavaFX tiene una vulnerabilidad reportada (CVE-2024-20925) en javafx-graphics.
+            Severidad: BAJA (3.1). Más información: https://nvd.nist.gov/vuln/detail/CVE-2024-20925
+            Se recomienda actualizar a una versión corregida cuando esté disponible.
+        -->
+        <!-- Dependencia para pruebas unitarias con JUnit Jupiter (JUnit 5) -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>${junit.jupiter.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!-- Plugin para ejecutar aplicaciones JavaFX con Maven -->
+            <plugin>
+                <groupId>org.openjfx</groupId>
+                <artifactId>javafx-maven-plugin</artifactId>
+                <version>0.0.8</version>
+                <configuration>
+                    <mainClass>org.example.Main</mainClass> <!-- Clase principal de la aplicación -->
+                </configuration>
+            </plugin>
+            <!-- Plugin para empaquetar el proyecto como un .jar ejecutable -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.3.0</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>org.example.Main</mainClass> <!-- Clase principal para el .jar -->
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+            <!-- Plugin para ejecutar pruebas con JUnit Jupiter -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.2.5</version>
+                <configuration>
+                    <useModulePath>false</useModulePath> <!-- Necesario para JavaFX y JUnit juntos -->
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
