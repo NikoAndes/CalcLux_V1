@@ -41,9 +41,9 @@ public class Main extends Application {
         System.out.println("  Tu calculadora avanzada de consola y GUI");
         System.out.println("  Laboratorio de Programación 3 - 2025");
         System.out.println("  Creado por:");
-        System.out.println("    Nicolas Isaza (7004625)");
+        System.out.println("    Nicolas Isaza Sierra (7004625)");
         System.out.println("    Juan David (XXXXXXXX)");
-        System.out.println("    Saul Alejandro (XXXXXXX)");
+        System.out.println("    Saúl Alejandro Pérez Estupiñán (7004631)");
         System.out.println("==============================================\n");
     }
 
