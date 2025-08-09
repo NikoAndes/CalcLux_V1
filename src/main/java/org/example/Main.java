@@ -8,10 +8,6 @@ import java.util.Scanner;
 /**
  * Clase principal del proyecto CalcLux.
  * Permite al usuario elegir entre la calculadora de consola o la calculadora gráfica (GUI).
- * Creado por:
- * - Niko Andes (202012345)
- * - Camila Torres (202056789)
- * - Juan Pérez (202034567)
  */
 public class Main extends Application {
 
@@ -46,8 +42,8 @@ public class Main extends Application {
         System.out.println("  Laboratorio de Programación 3 - 2025");
         System.out.println("  Creado por:");
         System.out.println("    Nicolas Isaza (7004625)");
-        System.out.println("    Camila Torres (202056789)");
-        System.out.println("    Juan Pérez (202034567)");
+        System.out.println("    Juan David (XXXXXXXX)");
+        System.out.println("    Saul Alejandro (XXXXXXX)");
         System.out.println("==============================================\n");
     }
 
