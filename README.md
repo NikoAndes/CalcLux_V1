@@ -37,5 +37,16 @@ CalcLux permite realizar operaciones matemáticas básicas y avanzadas, con vali
 ---
 
 ## 📦 Empaquetado y GUI
+<img width="444" height="558" alt="CON" src="https://github.com/user-attachments/assets/ed030014-e421-4a20-bdae-bd013b8f27a8" />
+/Figura Empaquetado Consola/
 <img width="583" height="416" alt="image" src="https://github.com/user-attachments/assets/0c7d1ae9-2875-40c4-a774-6251a08ced13" />
+/Figura GUI/
+---
+## 📄 UML y Test
+<img width="981" height="846" alt="UML-V2" src="https://github.com/user-attachments/assets/eaacee01-6d56-4804-bb49-e77378eed144" />
+/Figura UML/
+<img width="675" height="275" alt="pruebas_junit_calclux" src="https://github.com/user-attachments/assets/b5e05120-8721-4083-adc9-165cc3c1ac1b" />
+/Figura Test/
+
+
 
